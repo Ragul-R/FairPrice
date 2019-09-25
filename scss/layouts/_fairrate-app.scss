@@ -1,0 +1,125 @@
+.fairrate-profile{
+    padding: 0;
+
+    .profile-status{
+        background-color: #fff;
+        padding: 20px 0;
+        .container{
+            width: 1140px;
+            margin:auto;
+        }
+    }
+}
+.profile-status{
+    .status-progress{
+        float: left;
+        position: relative;
+        margin-right: 25px;
+        .progress-ring{
+            height: 120px;
+            width: 120px;
+            .progress-ring-circle{
+                transition: stroke-dashoffset ease .5s;
+                transform: rotate(-90deg);
+                transform-origin: 50% 50%; 
+                border-radius: 3px;
+            }
+        }
+        h2{
+            font-family: 'OpenSans-Light';
+            color: $dark-text;
+            line-height: 1;
+            font-size: 32px;
+        }
+        .status-percent{
+            @include center;
+        }
+    }
+
+    .link-rounded{
+        margin: 38px 0;
+    }
+}
+.status-content{
+    float: left;
+    padding: 12px 0;
+    h2{
+        text-transform: capitalize;
+    }
+    h3{
+        color: $battleship-grey;
+        margin-top: 5px;
+    }
+}
+
+.profile-view{
+    width: 510px;
+    margin: auto;
+    padding: 120px 0;
+
+    .profile-info{
+        li{
+            background: #fff;
+            padding: 20px;
+            font-size: 0;
+            &::after{
+                content:'';
+                display: block;
+                clear: both;
+            }
+            &+li{
+                margin-top: 20px;
+            }
+            &>span{
+                font-size: 18px;
+                border: 2px solid $gun-metal;
+                display: inline-block;
+                width: 24px;
+                line-height: 20px;
+                text-align: center;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+            h3{
+                font-size: 24px;
+                text-transform: capitalize;
+                display: inline-block;
+                vertical-align: middle;
+                margin-left: 20px;
+                color: $dark-text;
+                -webkit-font-smoothing: antialiased;
+            }
+            .options{
+                float: right;
+                button{
+                    text-transform: capitalize;
+                    color: #ed6347;
+                    line-height: 24px;
+                    vertical-align: top;
+                    margin-right: 12px;
+                }
+            }
+            .link-rounded{
+                background: $bright-skyblue;
+                border: none;
+                color: #fff;
+                font-size: 14px;
+
+                span:first-child{
+                    border-color: #fff;
+                    text-transform: capitalize;
+                }
+            }
+        }
+        .disabled{
+            color:#cbcbcb;
+            background: #f3f3f3;
+            &>span{
+                border-color: #c5c5c5;
+            }
+            h3{
+                color: #c5c5c5;
+            }
+        }
+    }
+}

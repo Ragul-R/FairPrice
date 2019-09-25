@@ -1,0 +1,87 @@
+footer{
+    padding: 50px 0;
+    background-color: $pale-grey2;
+    color: $primary-text-color;
+    .container{
+        width: 1140px;
+        margin: auto;
+    }
+    &>ul>li{
+        float: left;
+    }
+    .container{
+        width: 1140px;
+    }
+    &>p{
+        width: 1140px;
+        margin: auto;
+        font-size: 12px;
+        margin-top: 70px;
+    }
+}
+.contact-info{
+    width: 178px;
+    &>ul>li{
+        +li{
+            margin-top: 15px;
+        }
+    }
+    .contact-mail{
+        font-size: 12px;
+        line-height: 21px;
+        a{
+            color: $bright-cyan;
+            text-decoration: underline;
+        }
+    }
+    .contact-phone{
+        font-size: 18px;
+        color: $gun-metal;
+    }
+
+    .contact-social{
+        a{
+            display: inline-block;
+
+            &+a{
+                margin-left: 20px;
+            }
+        }
+    }
+}
+.company-info,.legal-info{
+    span,a{
+        display: inline-block;
+        width: 100%;
+        line-height: 28px;
+        font-size: 14px;
+    }
+    span{
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+    a{
+        color: $gun-metal;
+    }
+}
+.company-info{
+    width: 67px;
+    margin-left: 123px;
+}
+.legal-info{
+    width: 157px;
+    margin-left: 128px;
+}
+.brand-info{
+    width: 362px;
+    margin-left: 125px;
+
+    figure{
+        figcaption{
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 28px;
+        }
+    }
+}

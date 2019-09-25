@@ -1,0 +1,45 @@
+.icon-bars{
+    height:25px;
+    width: 25px;
+    vertical-align: middle;
+}
+.icon-bell{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    fill: $primary-text-color;
+}
+.icon-phone{
+    height: 16px;
+    width: 16px;
+    fill: $primary-text-color;
+    vertical-align: middle;
+}
+.icon-facebook,.icon-twitter,.icon-linkedin{
+    height: 30px;
+    width: 30px;
+}
+
+.icon-mail,.icon-room{
+    height: 24px;
+    width: 24px;
+    fill: #000;
+}
+.icon-criminal,.icon-fire{
+    height:46px;
+    width: 46px;
+}
+.icon-upload{
+    width: 92px;
+    height:80px;
+}
+
+.icon-trash,.icon-pdf,.icon-image{
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    fill: $gun-metal;
+}
+.icon-pdf,.icon-image{
+    fill: #da3737;
+}

@@ -1,0 +1,23 @@
+.signup-username {
+    padding: 80px 0 0;
+    &.container{
+        width: 540px;
+    }
+    margin-bottom: 200px;
+    text-align: center;
+
+    .input-group {
+        font-size: 0;
+        margin: 50px 0 30px;
+
+        input {
+            border: 1px solid $pale-blue;
+            padding: 15px;
+            width: 200px;
+
+            &+input {
+                margin-left: 20px;
+            }
+        }
+    }
+}

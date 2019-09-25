@@ -1,0 +1,66 @@
+.fairrate-dashboard{
+    &.container{
+        width: 950px;
+    }
+    &>h2{
+        text-transform: capitalize;
+        margin-bottom: 40px;
+    }
+}
+.dashboard{
+    &::after{
+        content:'';
+        display:block;
+        clear: both;
+    }
+    li{
+        width: calc(50% - 15px);
+        background: #fff;
+        padding: 20px;
+        float: left;
+        border-radius: 3px;
+        box-shadow: 0 1px 18px 0 rgba(0, 0, 0, 0.09), 0 6px 10px 0 rgba(0, 0, 0, 0.07);
+        
+        &:nth-child(2n){
+            margin-left: 30px;
+        }
+        .profile-status{
+            position: relative;
+            float: left;
+            height: 130px;
+            width: 130px;
+            .progress-ring{
+               height: inherit;
+               width: inherit; 
+            }
+            .status-percent{
+                @include center;
+            }
+        }
+        .profile-content{
+            float: left;
+            width: calc(100% - 160px);
+            margin-left: 20px;
+
+        }
+        h3{
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+        p{
+            color: $battleship-grey;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        .link-primary,.link{
+            margin-top: 10px;
+        }
+    }
+    .new{
+        background: none;
+        box-shadow: none;
+        border: 2px dashed $pale-blue;
+    }
+}

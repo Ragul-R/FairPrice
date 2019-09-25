@@ -1,0 +1,60 @@
+.progress-ring{
+    height: 120px;
+    width: 120px;
+    .progress-ring-circle{
+        transition: stroke-dashoffset ease .5s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%; 
+        border-radius: 3px;
+    }
+}
+
+.progress-bar{
+    display: inline-block;
+    width: 100%;
+    height: 4px;
+    vertical-align: middle;
+    margin-left: 10px;
+    &::-webkit-meter-optimum-value{
+        background: $gun-metal;
+        border-radius: 3px;
+    }
+    &::-webkit-meter-bar{
+        background: $pale-blue;
+        border-radius: 3px;
+    }
+    &.years15{
+        &::-webkit-meter-optimum-value{
+            background: $years15-color;
+        }
+    }
+    &.years20{
+        &::-webkit-meter-optimum-value{
+            background: $years20-color;
+        }
+    }
+    &.years30{
+        &::-webkit-meter-optimum-value{
+            background: $years30-color;
+        }
+    }
+    &.years10{
+        &::-webkit-meter-optimum-value{
+            background: $years10-color;
+            border-radius: 3px;
+        }
+    }
+    &.years7{
+        &::-webkit-meter-optimum-value{
+            background: $years7-color;
+            border-radius: 3px;
+        }
+    }
+    &.years5{
+        &::-webkit-meter-optimum-value{
+            background: $years5-color;
+            border-radius: 3px;
+        }
+    }
+
+}

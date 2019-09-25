@@ -1,0 +1,218 @@
+.house-rates {
+    &.container {
+        width: 1140px;
+    }
+
+    h2,
+    &>h4 {
+        text-align: center;
+        width: 540px;
+        margin: auto;
+    }
+    h2{
+        margin-bottom: 15px;
+    }
+    h4 {
+        font-size: 18px;
+        color: $battleship-grey;
+        text-transform: none;
+
+        span {
+            color: $gun-metal;
+        }
+    }
+
+    .filter {
+        font-size: 0;
+        margin: 60px 0 30px;
+
+        &>.form-input {
+            padding: 8px 14px;
+            width: 220px;
+            display: inline-block;
+            margin-right: 20px;
+
+            select {
+                width: 100%;
+                font-size: 14px;
+                color: $dark-text;
+                background: none;
+            }
+        }
+
+        .sort {
+            float: right;
+            margin: 0;
+            label {
+                font-size: 13px;
+                color: $primary-text-color;
+            }
+
+            select {
+                width: calc(100% - 50px);
+            }
+        }
+    }
+
+    .search-nav{
+        text-align: center;
+        font-size: 0;
+    }
+}
+
+.search-results {
+    border-radius: 3px;
+    border: 1px solid $pale-blue;
+    box-shadow: 0 6px 8px 0 rgba(164, 164, 164, .21);
+    background: #fff;
+}
+.result-list {
+
+    .result-head{
+        background: #ecedf0;
+        padding: 14px 20px;
+        h6{
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 20px;
+        }
+        .spin-btn{
+            margin-right: 10px;
+            font-size: 0;
+        }
+        .lender-estimates{
+            span{
+                width:20px;
+            }
+        }
+        .lender-apply{
+            text-align: right;
+        }
+        div>a{
+            display: inline-block;
+            width: 18px;
+            font-size: 18px;
+            color: #fff;
+            background-color: $bright-cyan;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+    }
+    li {
+        padding: 25px 20px;
+        &::after{
+            display: block;
+            content: '';
+            clear: both;
+        }
+        &+li {
+            border-top: 1px solid $pale-blue;
+        }
+
+        &:last-child{
+            border-bottom: 1px solid $pale-blue;
+        }
+
+        &>div,&>figure{
+            float: left;
+            vertical-align: top;
+            font-size: 0;
+        }
+
+        span {
+            display: inline-block;
+            line-height: 22px;
+            font-size: 14px;
+            text-transform: capitalize;
+            color: $primary-text-color;
+        }
+
+        h5 {
+            color: #007ace;
+        }
+
+        h4 {
+            font-size: 16px;
+            color: $dark-text;
+        }
+        .lender {
+            width: 150px;
+            margin-right: 50px;
+            display: inline-block;
+
+            img {
+                padding: 0 20px 20px;
+            }
+
+            figcaption {
+
+                h4,
+                span {
+                    font-size: 14px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    color: $primary-text-color;
+                }
+            }
+        }
+        
+        .lender-apr {
+            width: 110px;
+            margin-right: 56px;
+        }
+
+        .lender-rates {
+            width: 92px;
+            margin-right: 90px;
+
+            h4 {
+                margin-bottom: 10px;
+
+                span {
+                    color: inherit;
+                    font-size: 16px;
+                }
+            }
+
+            &>span {
+                font-size: 14px;
+                color: $primary-text-color;
+                width: 100%;
+            }
+        }
+
+        .lender-estimates {
+            width: 170px;
+            margin-right: 110px;
+
+            h5 {
+                display: inline-block;
+
+                &+sup {
+                    font-size: 14px;
+                    color: $primary-text-color;
+                    vertical-align: top;
+                    line-height: 36px;
+                }
+            }
+
+            span {
+                width: 100%;
+            }
+        }
+
+        .faqs {
+            width: 161px;
+            margin-right: 20px;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+        }
+        .lender-apply{
+            width: 88px;
+        }
+    }
+}

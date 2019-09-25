@@ -1,0 +1,53 @@
+@mixin checkbox{
+    &::before{
+        content: '';
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        border: 1px solid $light-blue-grey;
+        border-radius: 3px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+    &::after{
+        content:'';
+        opacity: 0;
+        height: 14px;
+        width: 7px;
+        border: solid $bright-skyblue;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+        position: absolute;
+        left: 11px;
+        top: 5px;
+        transition: opacity ease-in 100ms;
+    }
+} 
+
+@mixin bullets{
+    &::before{
+        content: '';
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        vertical-align: middle;
+        margin-right: 20px;
+        background: $gun-metal;
+        border-radius: 50%;
+    }
+}
+@mixin center($x:true,$y:true){
+    position: absolute;
+    @if $x and $y{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }@else if($x){
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    @else if($y){
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
