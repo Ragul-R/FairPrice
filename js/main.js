@@ -50,3 +50,29 @@ for(let i=1;i<circleProgress.length;i+=2){
     circleProgress[i].style.strokeDasharray = `${circum} ${circum}`;
     circleProgress[i].style.strokeDashoffset = offset;
 }
+var section = document.getElementsByTagName('section');
+var btn = document.getElementsByTagName('button');
+
+for(let i=0;i<btn.length;i++){
+    btn[i].onclick = function(event){
+        let currentSec = btn[i].closest('section');
+        let currentStep = Number(currentSec.dataset.step);
+        section[currentStep].classList.remove('current-section');
+    
+        console.log(currentStep)
+        if(btn[i].classList.contains('btn-primary')){
+            nextSec(currentStep);
+        }else if(btn[i].classList.contains('btn-default')){
+            prevSec(currentStep);
+        }else if(btn[i].classList.contains('btn-secondary')){
+            nextSec(currentStep);
+        }
+    }
+}
+
+function nextSec(step){
+    section[step+1].classList.add('current-section');
+}
+function prevSec(step){
+    section[step-1].classList.add('current-section');
+}
