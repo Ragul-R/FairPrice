@@ -62,27 +62,27 @@
     text-transform: capitalize;
 
     &.years15 {
-        background: $years15-color;
+        background: $bg-green;
         color:#fff;
     }
     &.years20{
-        background: $years20-color;
+        background: $bg-blue;
         color:#fff;
     }
     &.years30{
-        background: $years30-color;
+        background: $bg-darkblue;
         color:#fff;
     }
     &.years10{
-        background: $years10-color;
+        background: $bg-purple;
         color:#fff;
     }
     &.years7{
-        background: $years7-color;
+        background: $bg-violet;
         color:#fff;
     }
     &.years5{
-        background: $years5-color;
+        background: $bg-red;
         color:#fff;
     }
 }
@@ -99,19 +99,6 @@
     }
 }
 
-.link-rounded{
-    float: right;
-    border-radius: 3px;
-    padding: 12px 10px;
-    border: 2px solid $light-blue-grey;
-    font-size: 14px;
-    color: $light-blue-grey;
-    span:first-child{
-        padding-right: 30px;
-        margin-right: 10px;
-        border-right: 2px solid $light-blue-grey;
-    }
-}
 .link,.link-primary{
     padding: 12px 12px;
     border: 2px solid $light-blue-grey;

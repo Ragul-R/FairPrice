@@ -114,7 +114,7 @@
      .years15 {
          &+label {
              span {
-                 background: $years15-color;
+                 background: $bg-green;
              }
          }
      }
@@ -122,7 +122,7 @@
      .years20 {
          &+label {
              span {
-                 background: $years20-color;
+                 background: $bg-blue;
              }
          }
      }
@@ -130,7 +130,7 @@
      .years30 {
          &+label {
              span {
-                 background: $years30-color;
+                 background: $bg-darkblue;
              }
          }
      }
@@ -138,7 +138,7 @@
      .years10 {
          &+label {
              span {
-                 background: $years10-color;
+                 background: $bg-purple;
              }
          }
      }
@@ -146,7 +146,7 @@
      .years7 {
          &+label {
              span {
-                 background: $years7-color;
+                 background: $bg-violet;
              }
          }
      }
@@ -154,7 +154,7 @@
      .years5 {
          &+label {
              span {
-                 background: $years5-color;
+                 background: $bg-red;
              }
          }
      }
@@ -197,12 +197,10 @@
 
  main {
      background: $pale-grey;
-     overflow: hidden;
-
+     
      section {
          display: none;
-         margin: auto;
-         padding: 80px 0;
+         padding: 140px 0;
      }
 
      .current-section {

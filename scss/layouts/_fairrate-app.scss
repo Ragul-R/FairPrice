@@ -1,5 +1,5 @@
 .fairrate-profile{
-    padding: 0;
+    padding: 66px 0 0;
 
     .profile-status{
         background-color: #fff;
@@ -36,8 +36,9 @@
         }
     }
 
-    .link-rounded{
-        margin: 38px 0;
+    .link{
+        margin: 38px 0 0;
+       float: right;
     }
 }
 .status-content{
@@ -99,16 +100,8 @@
                     margin-right: 12px;
                 }
             }
-            .link-rounded{
-                background: $bright-skyblue;
-                border: none;
-                color: #fff;
-                font-size: 14px;
-
-                span:first-child{
-                    border-color: #fff;
-                    text-transform: capitalize;
-                }
+            .link-primary{
+                float: right;
             }
         }
         .disabled{

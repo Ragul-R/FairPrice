@@ -26,34 +26,38 @@
         }
     }
 
-    span {
+    label {
         color: #47495a;
         font-size: 12px;
         text-transform: uppercase;
     }
 
-    .dob-input {
-        width: 100%;
-        position: relative;
+    .form-input {
+        font-size: 0;
         margin-top: 10px;
-
-        label {
-            position: absolute;
-            top: 9px;
-            left: 10px;
+        label{
+            display: inline-block;
+            vertical-align: middle;
         }
-
         input[type='date'] {
-            width: calc(100% - 62px);
-            padding: 10px 15px 10px 45px;
+            width: calc(100% - 36px);
             font-size: 14px;
+            margin-left: 10px;
             color: $dark-text;
             text-transform: uppercase;
             border-radius: 3px;
-            border: 1px solid $light-blue-grey;
-
+            vertical-align: middle;
             &::-webkit-inner-spin-button {
                 display: none;
+            }
+
+            &::-webkit-calendar-picker-indicator {
+                opacity: 1;
+                cursor: pointer;
+
+                &:hover {
+                    background: none;
+                }
             }
 
             &::-webkit-clear-button {
@@ -65,14 +69,17 @@
 
 
 .form-main {
-    
+
     &>.form-input {
         width: 380px;
         margin-bottom: 30px;
         float: right;
-        &.checked{
+        font-size: 0;
+
+        &.checked {
             border-color: $bright-skyblue;
         }
+
         input[type="text"],
         input[type='email'] {
             width: calc(100% - 61px);
@@ -134,9 +141,11 @@
     border: 1px solid $light-blue-grey;
     border-radius: 3px;
     margin-bottom: 30px;
-    &.checked{
+    
+    &.checked {
         border-color: $bright-skyblue;
     }
+
     input[type="checkbox"] {
         display: none;
 

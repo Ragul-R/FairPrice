@@ -86,7 +86,7 @@
                 <mask id="b" fill="#fff">
                     <use xlink:href="#a" />
                 </mask>
-                <path d="M0 0h24v24H0z" fill="#000" fill-opacity=".54" mask="url(#b)" />
+                <path d="M0 0h24v24H0z" fill="#000" mask="url(#b)" />
             </g>
         </symbol>
 
@@ -131,33 +131,33 @@
                     &times;
                 </button>
                 <nav>
-                    <a href="" class="brand-logo">
+                    <a href="javascript:void(0);" class="brand-logo">
                         <img src="images/logo.svg" alt="brand-logo">
                     </a>
-                    <a href="">home</a>
-                    <a href="">application</a>
-                    <a href="">document</a>
-                    <a href="">profile</a>
+                    <a href="javascript:void(0);">home</a>
+                    <a href="javascript:void(0);">application</a>
+                    <a href="javascript:void(0);">document</a>
+                    <a href="javascript:void(0);">profile</a>
                 </nav>
-                <div class="nav-social">
-                    <a href="">
+                <nav class="nav-social">
+                    <a href="javascript:void(0);">
                         <svg class="icon-twitter">
                             <use href="#icon-twitter"></use>
                         </svg>
                     </a>
 
-                    <a href="">
+                    <a href="javascript:void(0);">
                         <svg class="icon-linkedin">
                             <use href="#icon-linkedin"></use>
                         </svg>
                     </a>
 
-                    <a href="">
+                    <a href="javascript:void(0);">
                         <svg class="icon-facebook">
                             <use href="#icon-facebook"></use>
                         </svg>
                     </a>
-                </div>
+                </nav>
             </div>
         </div>
         <a class="brand-logo" href="javascript:void(0);">
@@ -172,45 +172,44 @@
 
             <div class="user-dropdown">
                 <a href="">
-                    <img src="images/user.jpg" srcset="images/user@2x.jpg 2x,
-                                    images/user@3x.jpg 3x" alt="user-image">
+                    <img src="images/user.jpg">
                 </a>
                 <span class="drop-toggle">Adrian Manea</span>
                 <ul class="user-list">
-                    <li><a href="">profile</a></li>
-                    <li><a href="">setting</a></li>
-                    <li><a href="">logout</a></li>
+                    <li><a href="javascript:void(0);">profile</a></li>
+                    <li><a href="javascript:void(0);">setting</a></li>
+                    <li><a href="javascript:void(0);">logout</a></li>
                 </ul>
             </div>
         </div>
         <nav>
-            <a class="active-nav" href="">home</a>
-            <a href="">application</a>
-            <a href="">documents</a>
+            <a class="active-nav" href="javascript:void(0);">home</a>
+            <a href="javascript:void(0);">application</a>
+            <a href="javascript:void(0);">documents</a>
         </nav>
     </header>
 
     <!--MAIN-->
     <main>
-        <section class="signup-username current-section container" data-step="0">
+        <section class="signup-username step current-section container" data-step="0">
             <h2>I'll get you an awesome price in seconds. Ready to go?</h2>
 
             <div class="input-group">
                 <input type="text" placeholder="first name">
                 <input type="text" placeholder="last name">
             </div>
-            <button class="btn-primary">next</button>
+            <button class="btn-primary next-btn">next</button>
         </section>
 
-        <section class="signup-address container clear" data-step="1">
+        <section class="signup-address step container clear" data-step="1">
             <artilce class="col-2 form-caption">
                 <div class="form-info">
                     <h2>Fill the form in the right</h2>
 
                     <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
-                <span>date of birth</span>
-                <div class="dob-input">
+                <label for="dob">date of birth</label>
+                <div class="form-input">
                     <label for="dob">
                         <svg class="icon-mail">
                             <use href="#icon-mail"></use>
@@ -286,36 +285,36 @@
                 </div>
 
                 <div class="nav-button">
-                    <button class="btn-primary">next</button>
-                    <button class="btn-default">back</button>
+                    <button class="btn-primary next-btn">next</button>
+                    <button class="btn-default prev-btn">back</button>
                 </div>
             </article>
         </section>
 
-        <section class="signup-upload container clear" data-step="2">
+        <section class="signup-upload step container clear" data-step="2">
             <h2>Few more step ahead upload your ID document&#x1f446;</h2>
 
             <nav class="tab-nav clear">
-                <a class="tab-active" href="">photo identification</a>
-                <a href="">proof of address</a>
+                <a class="tab-active" href="javascript:void(0);">photo identification</a>
+                <a href="javascript:void(0);">proof of address</a>
             </nav>
 
             <article class="tab show-tab">
                 <h3>Upload photo Identification</h3>
                 <ul class="tab-body clear">
                     <li class="col-2">
-                        <form class="photo-id-upload">
-                            <input type="file" id="file-upload">
+                        <form class="file-upload">
+                            <input type="file" id="input-file">
                             <svg class="icon-upload">
                                 <use href="#icon-upload"></use>
                             </svg>
-                            <label for="file-upload">Drag files here to upload or
-                                <span>select a file</span> from your device</label>
+                            <p for="file-upload">Drag files here to upload or
+                                <span>select a file</span> from your device</p>
 
                             <span class="note">JPG, PNG or PDF only, maximum file size - 5MB</span>
                         </form>
                     </li>
-                    <li class="col-2 photo-id-instruct">
+                    <li class="col-2 file-upload-instruct">
                         <h4>your documents must be:</h4>
                         <ul>
                             <li>a goverment issued
@@ -367,18 +366,18 @@
                 <h3>Upload Address Proof</h3>
                 <ul class="tab-body clear">
                     <li class="col-2">
-                        <form class="photo-id-upload">
-                            <input type="file" id="file-upload">
+                        <form class="file-upload">
+                            <input type="file" id="input-file">
                             <svg class="icon-upload">
                                 <use href="#icon-upload"></use>
                             </svg>
-                            <label for="file-upload">Drag files here to upload or
-                                <span>select a file</span> from your device</label>
+                            <p for="file-upload">Drag files here to upload or
+                                <span>select a file</span> from your device</p>
 
                             <span class="note">JPG, PNG or PDF only, maximum file size - 5MB</span>
                         </form>
                     </li>
-                    <li class="col-2 photo-id-instruct">
+                    <li class="col-2 file-upload-instruct">
                         <h4>your documents must be:</h4>
                         <ul>
                             <li>a goverment issued
@@ -396,12 +395,12 @@
             </article>
 
             <div class="nav-button">
-                <button class="btn-default">back</button>
-                <button class="btn-primary">next</button>
+                <button class="btn-default prev-btn">back</button>
+                <button class="btn-primary next-btn">next</button>
             </div>
         </section>
 
-        <section class="house-rates container" data-step="3">
+        <section class="house-rates step container" data-step="3">
             <h2>Your fairest results</h2>
             <h4><span class="result-items">16</span> results for <span class="years">30</span> years in xeid in <span
                     class="house-id">64117</span>
@@ -453,7 +452,7 @@
                                 <button class="arrow-down"></button>
                             </div>
                             <h6>apr</h6>
-                            <a href="">&quest;</a>
+                            <a href="javascript:void(0);">&quest;</a>
                         </div>
                         <div class="lender-rates">
                             <div class="sort-btn">
@@ -468,7 +467,7 @@
                                 <button class="arrow-down"></button>
                             </div>
                             <h6>est. payment/fees</h6>
-                            <a href="">&quest;</a>
+                            <a href="javascript:void(0);">&quest;</a>
                         </div>
 
                         <div class="faqs">
@@ -510,7 +509,7 @@
                         </div>
 
                         <div class="lender-apply">
-                            <button class="btn-secondary">next</button>
+                            <button class="btn-secondary next-btn">next</button>
                         </div>
                     </li>
                     <li>
@@ -543,7 +542,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                     <li>
                         <figure class="lender">
@@ -575,7 +574,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                     <li>
                         <figure class="lender">
@@ -607,7 +606,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                     <li>
                         <figure class="lender">
@@ -639,7 +638,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                     <li>
                         <figure class="lender">
@@ -671,7 +670,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                     <li>
                         <figure class="lender">
@@ -703,7 +702,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                     <li>
                         <figure class="lender">
@@ -735,7 +734,7 @@
                             <span>toll-free, no obligations</span>
                         </div>
 
-                        <button class="btn-secondary">next</button>
+                        <button class="btn-secondary next-btn">next</button>
                     </li>
                 </ul>
 
@@ -745,7 +744,7 @@
                 </div>
         </section>
 
-        <section class="advanced-rates container clear" data-step="4">
+        <section class="advanced-rates step container clear" data-step="4">
             <h2>Your fairest results</h2>
 
             <article class="col-2">
@@ -907,11 +906,11 @@
 
                 <div class="nav-button">
                     <div class="note">
-                        <a href="">&quest;</a>
+                        <a href="javascript:void(0);">&quest;</a>
                         <span>Rates and fees as of</span>
                         <time>12:06 PM</time>
                     </div>
-                    <button class="btn-primary">next</button>
+                    <button class="btn-primary next-btn">next</button>
                 </div>
             </article>
             <article class="col-2 filters">
@@ -990,14 +989,14 @@
             </article>
         </section>
 
-        <section class="fairrate-profile" data-step="5">
+        <section class="fairrate-profile step" data-step="5">
             <article class="profile-status">
                 <div class="container clear">
                     <div class="status-progress">
                         <svg class="progress-ring">
                             <circle class="progress-ring-circle" stroke-width="7" stroke="#dbecf8" fill="transparent"
                                 r="46" cx="60" cy="60" />
-                            <circle class="progress-ring-circle" data-progress="10" stroke-width="7" stroke="#23c0f5"
+                            <circle class="progress-ring-circle" data-progress="60" stroke-width="7" stroke="#23c0f5"
                                 stroke-linecap="round" fill="transparent" r="46" cx="60" cy="60" />
                         </svg>
                         <div class="status-percent">
@@ -1010,9 +1009,8 @@
                         <h3>Great Start Adrian! Please complete remaining steps!</h3>
                     </div>
 
-                    <a class="link-rounded" href="">
-                        <span>talk to us</span>
-                        <span>&rarr;</span>
+                    <a class="link" href="">
+                        talk to us
                     </a>
                 </div>
             </article>
@@ -1037,9 +1035,8 @@
                     <li>
                         <span>3</span>
                         <h3>adverse events</h3>
-                        <button class="link-rounded" href="">
-                            <span>get started</span>
-                            <span>&rarr;</span>
+                        <button class="link-primary next-btn">
+                            get started
                         </button>
                     </li>
                     <li class="disabled">
@@ -1050,7 +1047,7 @@
             </article>
         </section>
 
-        <section class="fairrate-dashboard container" data-step="6">
+        <section class="fairrate-dashboard container step" data-step="6">
             <h2>good morning adrian</h2>
             <ul class="dashboard">
                 <li>
@@ -1098,19 +1095,19 @@
                         <a href="tel:+62 202 555 0117">+62 202 555 0117</a>
                     </li>
                     <li class="contact-social">
-                        <a href="">
+                        <a href="javascript:void(0);">
                             <svg class="icon-twitter">
                                 <use href="#icon-twitter"></use>
                             </svg>
                         </a>
 
-                        <a href="">
+                        <a href="javascript:void(0);">
                             <svg class="icon-linkedin">
                                 <use href="#icon-linkedin"></use>
                             </svg>
                         </a>
 
-                        <a href="">
+                        <a href="javascript:void(0);">
                             <svg class="icon-facebook">
                                 <use href="#icon-facebook"></use>
                             </svg>
@@ -1121,17 +1118,17 @@
             <li class="company-info">
                 <nav>
                     <span>company</span>
-                    <a href="">resources</a>
-                    <a href="">careers</a>
+                    <a href="javascript:void(0);">resources</a>
+                    <a href="javascript:void(0);">careers</a>
                 </nav>
             </li>
             <li class="legal-info">
                 <nav>
                     <span>legal</span>
-                    <a href="">NMLS consumer access</a>
-                    <a href="">privacy policy</a>
-                    <a href="">terms of use</a>
-                    <a href="">disclosures &amp; licensing</a>
+                    <a href="javascript:void(0);">NMLS consumer access</a>
+                    <a href="javascript:void(0);">privacy policy</a>
+                    <a href="javascript:void(0);">terms of use</a>
+                    <a href="javascript:void(0);">disclosures &amp; licensing</a>
                 </nav>
             </li>
             <li class="brand-info">

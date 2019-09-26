@@ -25,34 +25,34 @@
     }
     &.years15{
         &::-webkit-meter-optimum-value{
-            background: $years15-color;
+            background: $bg-green;
         }
     }
     &.years20{
         &::-webkit-meter-optimum-value{
-            background: $years20-color;
+            background: $bg-blue;
         }
     }
     &.years30{
         &::-webkit-meter-optimum-value{
-            background: $years30-color;
+            background: $bg-darkblue;
         }
     }
     &.years10{
         &::-webkit-meter-optimum-value{
-            background: $years10-color;
+            background: $bg-purple;
             border-radius: 3px;
         }
     }
     &.years7{
         &::-webkit-meter-optimum-value{
-            background: $years7-color;
+            background: $bg-violet;
             border-radius: 3px;
         }
     }
     &.years5{
         &::-webkit-meter-optimum-value{
-            background: $years5-color;
+            background: $bg-red;
             border-radius: 3px;
         }
     }

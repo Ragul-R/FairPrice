@@ -2,7 +2,9 @@
      padding: 12px 30px;
      border-bottom: 1px solid $pale-blue;
      background: #fff;
-
+     position: fixed;
+     width: 100%;
+     z-index: 10;
      .brand-logo {
          display: inline-block;
          vertical-align: middle;
@@ -42,12 +44,6 @@
          margin-right: 20px;
      }
 
-     span {
-         display: inline-block;
-         margin-right: 20px;
-         cursor: pointer;
-     }
-
      a {
          display: inline-block;
          vertical-align: middle;
@@ -66,7 +62,6 @@
      position: relative;
 
      .drop-toggle {
-         margin: 0;
          cursor: pointer;
 
          &::after {
@@ -121,7 +116,7 @@
      .close-nav {
          font-size: 30px;
          float: right;
-         margin: 20px 20px 0;
+         margin-right: 20px;
          line-height: 20px;
          color: $gun-metal;
      }
@@ -134,10 +129,10 @@
          height: 100%;
          background: $pale-grey2;
          overflow: hidden;
+         padding: 20px 0;
          transition: width ease-in-out 350ms;
 
          a {
-             display: inline-block;
              color: $primary-text-color;
 
              &:hover {
@@ -149,16 +144,20 @@
              margin: 50px 30px;
 
              &>a {
-                 width: 100%;
-                 line-height: 28px;
+                display: block; 
+                line-height: 28px;
                  margin-bottom: 20px;
              }
          }
 
          .nav-social {
-             margin: 0 30px;
-
+             font-size: 0;
+             width: 170px;
+             margin: 0 auto;
              a {
+                 display: inline-block;
+                 margin-bottom: 0;
+                 line-height: normal;
                  &+a {
                      margin-left: 40px;
                  }
