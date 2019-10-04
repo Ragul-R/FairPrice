@@ -4,10 +4,7 @@ bs = require('browser-sync').create(),
 autoPrefixer = require('gulp-autoprefixer'),
 minify = require('gulp-clean-css'),
 sourceMaps = require('gulp-sourcemaps'),
-imageMin = require('gulp-imagemin'),
-pngMin = require('gulp-pngquant'),
 svg = require('gulp-svg-sprites'),
-svgMin = require('gulp-svgmin'),
 cheerio = require('gulp-cheerio'),
 fileInclude = require('gulp-file-include');
 
@@ -33,11 +30,6 @@ function watch(){
     gulp.watch('./js/*.js').on('change',bs.reload);
 }
 function svgSprite(){
-    // var svgs = gulp.src('./svg/*.svg').pipe(svg({mode:'defs',svgId:'icon-%f'}))
-    // function fileContents(filePath,file){
-    //     return file.contents.toString();
-    // }
-    // return gulp.src('./index.html').pipe(inject(svgs,{transform:fileContents})).pipe(gulp.dest('./svg'))
     return gulp.src('./svg/*.svg')
     .pipe(svg({
         mode: "symbols",

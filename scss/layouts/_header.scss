@@ -5,6 +5,7 @@
      position: fixed;
      width: 100%;
      z-index: 10;
+
      .brand-logo {
          display: inline-block;
          vertical-align: middle;
@@ -39,19 +40,16 @@
  .user-profile {
      margin-left: 75px;
      float: right;
-
-     button {
-         margin-right: 20px;
-     }
+     font-size: 0;
 
      a {
          display: inline-block;
          vertical-align: middle;
-         margin-right: 10px;
          color: $dark-text;
 
-         img {
+         &>img {
              border-radius: 50%;
+             margin-right: 10px;
          }
      }
  }
@@ -63,6 +61,7 @@
 
      .drop-toggle {
          cursor: pointer;
+         font-size: 15px;
 
          &::after {
              content: '';
@@ -85,25 +84,35 @@
          border-radius: 3px;
          transition: height ease-in-out .4s;
          text-align: center;
+
          li {
-             padding: 10px 25px;
-             a{
-                color: $primary-text-color;
-                &:hover{
-                    color: $dark-text;
-                }
+             padding: 10px 30px;
+             font-size: 14px;
+
+             a {
+                 color: $primary-text-color;
+             }
+
+             &:hover {
+                 background: rgba($battleship-grey, .3);
+
+                 a {
+                     color: $dark-text;
+                 }
              }
          }
      }
-     &.show-list{
-         .drop-toggle{
-             &::after{
-                border-width: 0 7px 7px 7px;
-                border-color: transparent transparent #637381 transparent;   
+
+     &.show-list {
+         .drop-toggle {
+             &::after {
+                 border-width: 0 7px 7px 7px;
+                 border-color: transparent transparent #637381 transparent;
              }
          }
-         .user-list{
-             height: 150px;
+
+         .user-list {
+             height: 140px;
          }
      }
  }
@@ -124,13 +133,13 @@
      .slide-nav-content {
          position: fixed;
          top: 0;
-         left: 0;
-         width: 0;
+         left: -250px;
+         width: 250px;
          height: 100%;
          background: $pale-grey2;
-         overflow: hidden;
+         overflow: auto;
          padding: 20px 0;
-         transition: width ease-in-out 350ms;
+         transition: all ease-in-out 350ms;
 
          a {
              color: $primary-text-color;
@@ -144,8 +153,8 @@
              margin: 50px 30px;
 
              &>a {
-                display: block; 
-                line-height: 28px;
+                 display: block;
+                 line-height: 28px;
                  margin-bottom: 20px;
              }
          }
@@ -154,10 +163,12 @@
              font-size: 0;
              width: 170px;
              margin: 0 auto;
+
              a {
                  display: inline-block;
                  margin-bottom: 0;
                  line-height: normal;
+
                  &+a {
                      margin-left: 40px;
                  }
@@ -167,7 +178,73 @@
 
      &.show-nav {
          .slide-nav-content {
-             width: 250px;
+             left: 0;
          }
+     }
+ }
+
+ .notifications {
+     display: inline-block;
+     margin-right: 20px;
+     position: relative;
+
+     .notifications-list {
+         position: absolute;
+         background: #f4f6f8;
+         width: 200px;
+         left: -87px;
+         margin-top: 20px;
+         border-radius: 5px;
+         display: none;
+         opacity: 0;
+         transform-origin: top;
+         animation: popup .5s ease;
+
+         &::before {
+             content: '';
+             display: inline-block;
+             border-style: solid;
+             border-color: transparent transparent #f4f6f8 transparent;
+             border-width: 0 12px 12px 12px;
+             position: absolute;
+             top: -12px;
+             left: 85px;
+         }
+
+         li {
+             padding: 10px 15px;
+             
+             a {
+                 font-size: 14px;
+                 vertical-align: baseline;
+                 max-width: 120px;
+                 text-overflow: ellipsis;
+                 overflow: hidden;
+                 white-space: nowrap;
+             }
+
+             span{
+                 float:right;
+                 content: '';
+                 border: solid rgba($gun-metal, .3);
+                 border-width: 0 2px 2px 0;
+                 transform: rotate(43deg);
+                 height: 10px;
+                 width: 5px;
+             }
+         }
+         .status-read{
+             a{
+                 color: rgba($battleship-grey, .3);
+             }
+             span{
+                 border-color: $bright-cyan;
+             }
+         }
+     }
+
+     .show-notifications {
+         display: block;
+         opacity: 1;
      }
  }
