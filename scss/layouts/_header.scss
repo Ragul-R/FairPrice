@@ -198,7 +198,7 @@
          display: none;
          opacity: 0;
          transform-origin: top;
-         animation: popup .5s ease;
+         animation: popup .5s ease-in-out;
 
          &::before {
              content: '';

@@ -109,3 +109,118 @@ window.addEventListener('click',function(event){
     }
 })
 
+//Template for house rates
+var rates = [3.225,2.302,2.92,4.32,6.311,3.223,2.323];
+var lenderDetails = [
+    {
+        lenderImage: 'images/loanlock.png',
+        lenderId: '7707',
+        lenderApr: '3.6',
+        lenderTimeStamp: 'Mar 10',
+        lenderRate: rates[0].toFixed(3),
+        lenderRatePoint: '1',
+        lenderRateLock: '30',
+        lenderFee: '898.09',
+        lenderFeePoint: '1',
+        lenderFeeLock: '30',
+        lenderPhone: '(887) 407 - 37123'
+    },
+    {
+        lenderImage: 'images/merix.png',
+        lenderId: '7702',
+        lenderApr: '3.9',
+        lenderTimeStamp: 'Apr 10',
+        lenderRate: rates[1].toFixed(3),
+        lenderRatePoint: '5',
+        lenderRateLock: '20',
+        lenderFee: '998.99',
+        lenderFeePoint: '8',
+        lenderFeeLock: '32',
+        lenderPhone: '(887) 407 - 372343'
+    },
+    {
+        lenderImage: 'images/cmls.png',
+        lenderId: '7237',
+        lenderApr: '3.3',
+        lenderTimeStamp: 'Dec 10',
+        lenderRate: rates[2].toFixed(3),
+        lenderRatePoint: '7',
+        lenderRateLock: '34',
+        lenderFee: '1338.12',
+        lenderFeePoint: '3',
+        lenderFeeLock: '10',
+        lenderPhone: '(887) 423 - 37234'
+    },
+    {
+        lenderImage: 'images/rmg.png',
+        lenderId: '7127',
+        lenderApr: '3.7',
+        lenderTimeStamp: 'Jan 11',
+        lenderRate: rates[3].toFixed(3),
+        lenderRatePoint: '6',
+        lenderRateLock: '23',
+        lenderFee: '1343.09',
+        lenderFeePoint: '6',
+        lenderFeeLock: '23',
+        lenderPhone: '(887) 407 - 24523'
+    },
+    {
+        lenderImage: 'images/equitable.png',
+        lenderId: '2442',
+        lenderApr: '2.6',
+        lenderTimeStamp: 'Jul 10',
+        lenderRate: rates[4].toFixed(3),
+        lenderRatePoint: '9',
+        lenderRateLock: '32',
+        lenderFee: '463.09',
+        lenderFeePoint: '2',
+        lenderFeeLock: '32',
+        lenderPhone: '(887) 407 - 134233'
+    },
+    {
+        lenderImage: 'images/wealthline.png',
+        lenderId: '2323',
+        lenderApr: '4.2',
+        lenderTimeStamp: 'May 10',
+        lenderRate: rates[5].toFixed(3),
+        lenderRatePoint: '9',
+        lenderRateLock: '10',
+        lenderFee: '525.09',
+        lenderFeePoint: '2',
+        lenderFeeLock: '64',
+        lenderPhone: '(887) 4527 - 32123'
+    },
+    {
+        lenderImage: 'images/nbc.png',
+        lenderId: '8764',
+        lenderApr: '5.6',
+        lenderTimeStamp: 'Nov 10',
+        lenderRate: rates[6].toFixed(3),
+        lenderRatePoint: '7',
+        lenderRateLock: '40',
+        lenderFee: '356.09',
+        lenderFeePoint: '3',
+        lenderFeeLock: '25',
+        lenderPhone: '(823) 4234 - 3343'
+    }
+]
+
+var lenderList = _.template(
+    '<li>'+
+        '<figure class="lender"><img src="<%= lenderImage %>" alt="loan lock">'+
+        '<figcaption><h4>nmslid: <span class="nmslid"><%= lenderId %></span></h4></figcaption></figure>'+
+        '<div class="lender-apr"><h5 class="apr"><span><%= lenderApr %></span> apr</h5><span class="timestamp"><%= lenderTimeStamp %></span></div>'+
+        '<div class="lender-rates"><h4 class="rates"><span><%= lenderRate %></span> Rate</h4><h6 class="points"><span><%= lenderRatePoint %></span> point </h6><h6 class="lock"><span><%= lenderRateLock %></span> rate lock</h6></div>'+
+        '<div class="lender-estimates"><h5 class="fees"><%= lenderFee %></h5><sup> /mo</sup> <h6 class="points"><span><%= lenderFeePoint %></span> point </h6><h6><span><%= lenderFeeLock %></span> rate lock</h6></div>'+
+        '<div class="faqs"><h4><%= lenderPhone %></h4><span>toll-free, no obligations</span></div>'+
+        '<div class="lender-apply"><button class="btn-secondary next-btn">next</button></div>'+
+    '</li>');
+
+var resultList = document.getElementsByClassName('result-list')[0];
+var lenderResult="";
+for(var i =0;i<lenderDetails.length;i++){
+    lenderResult += lenderList(lenderDetails[i]);
+}
+resultList.innerHTML += lenderResult;
+
+//Templates for advanced rates

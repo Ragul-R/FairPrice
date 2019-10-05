@@ -88,11 +88,11 @@
         .lender-apply{
             text-align: right;
         }
-        div>a{
+        a{
             display: inline-block;
             width: 18px;
             font-size: 18px;
-            color: #fff;
+            color: $pale-blue;
             background-color: $bright-cyan;
             text-align: center;
             border-radius: 50%;
@@ -131,11 +131,26 @@
 
         h5 {
             color: #007ace;
+            span{
+                color: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
         }
 
         h4 {
             font-size: 16px;
             color: $dark-text;
+            span{
+                color: inherit;
+                font-size: inherit;
+                line-height: inherit;
+            }
+        }
+        h6{
+            font-size:14px;
+            color: $primary-text-color;
+            line-height: 22px;
         }
         .lender {
             width: 150px;
@@ -143,7 +158,9 @@
             display: inline-block;
 
             img {
-                padding: 0 20px 20px;
+                padding: 0 20px;
+                margin-bottom: 20px;
+                width:100%;
             }
 
             figcaption {
@@ -161,6 +178,13 @@
         .lender-apr {
             width: 110px;
             margin-right: 56px;
+            h5{
+                span{
+                    &::after{
+                        content:'%';
+                    }
+                }
+            }
         }
 
         .lender-rates {
@@ -169,21 +193,17 @@
 
             h4 {
                 margin-bottom: 10px;
-
-                span {
-                    color: inherit;
-                    font-size: 16px;
+                span{
+                    &::after{
+                        content:'%';
+                    }
                 }
-            }
-
-            &>span {
-                display: block;
             }
         }
 
         .lender-estimates {
-            width: 170px;
-            margin-right: 110px;
+            width: 178px;
+            margin-right: 100px;
 
             h5 {
                 display: inline-block;
@@ -194,10 +214,6 @@
                     vertical-align: top;
                     line-height: 36px;
                 }
-            }
-
-            span {
-                display: block;
             }
         }
 
