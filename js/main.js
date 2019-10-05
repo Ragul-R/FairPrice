@@ -1,20 +1,20 @@
-//Tabs
-var tabNav = document.querySelectorAll('.tab-nav>a');
-var tab = document.getElementsByClassName('tab');
+// //Tabs
+// var tabNav = document.querySelectorAll('.tab-nav>a');
+// var tab = document.getElementsByClassName('tab');
 
-for(var i=0;i<tab.length;i++){
-    tabNav[i].addEventListener('click',function(event){
-        event.preventDefault();
-        for(var x=0;x<tab.length;x++){
-            tab[x].classList.remove('show-tab');
-            tabNav[x].classList.remove('tab-active');
-            if(i==x){
-                tab[x].classList.add('show-tab');
-                tabNav[x].classList.add('tab-active');
-            }
-        }
-    })
-}
+// for(var i=0;i<tab.length;i++){
+//     tabNav[i].addEventListener('click',function(event){
+//         event.preventDefault();
+//         for(var x=0;x<tab.length;x++){
+//             tab[x].classList.remove('show-tab');
+//             tabNav[x].classList.remove('tab-active');
+//             if(i==x){
+//                 tab[x].classList.add('show-tab');
+//                 tabNav[x].classList.add('tab-active');
+//             }
+//         }
+//     })
+// }
 
 //UserDropDown
 var userDropToggle = document.getElementsByClassName('drop-toggle')[0];
@@ -107,6 +107,12 @@ window.addEventListener('click',function(event){
     if( target != userDropDown && target != userDropToggle && !target.classList.contains('show-list')){
         userDropDown.classList.remove('show-list');
     }
+})
+window.addEventListener('drop',function(event){
+    event.preventDefault();
+})
+window.addEventListener('dragover',function(event){
+    event.preventDefault();
 })
 
 //Template for house rates
@@ -223,4 +229,76 @@ for(var i =0;i<lenderDetails.length;i++){
 }
 resultList.innerHTML += lenderResult;
 
-//Templates for advanced rates
+//drag and drop 
+var dropArea = document.getElementsByClassName('file-upload')[0];
+var fileUpload = document.getElementsByClassName('input-file')[0];
+var fileList = document.getElementsByClassName('files-list')[0];
+
+fileUpload.addEventListener('change',function(event){
+    event.preventDefault();
+    uploadFile(fileUpload.files);
+    
+})
+dropArea.addEventListener('dragover',function(event){
+    event.preventDefault();
+})
+dropArea.addEventListener('drop',function(event){
+    event.preventDefault();
+    uploadFile(event.dataTransfer.files);
+});
+var listItem = _.template(
+    '<li class="clear">'+
+        '<svg class="icon-<%= type %>"><use href="#icon-<%= type %>"></use></svg>'+
+        '<span class="file-name"><%= name %></span>'+
+        '<span class="file-type"><%= type %></span>'+
+        '<span class="file-size"><%= size %></span>'+
+        '<span class="file-status"><%= status %></span>'+
+        '<button class="remove-file"><svg class="icon-trash"><use href="#icon-trash"></use></svg></button>'+
+    '</li>'
+);
+
+function uploadFile(files){
+    var file = {};
+    var fileType = [];    
+    for(var i=0;i<files.length;i++){
+        if(files[i].size<5242880){
+            file[i]={
+            
+                name: files[i].name,
+                size: Math.ceil(files[i].size/1048576)+' Mbs',
+                type: type(files[i].name),
+                status: 'uploaded'
+            }
+            if(!fileList.hasChildNodes()){
+                fileList.style.display='block';
+            }
+            
+            //list genrate using templates
+            var fileListItems = "";
+            for(var i=0; i<files.length;i++){
+                fileListItems += listItem(file[i]);
+            }
+            fileList.innerHTML += fileListItems;
+            removeFileEvent();
+        }else{
+            alert('file:'+files[i].name+'is more than 5 Mb');
+        }
+    } 
+}
+
+function type(name){
+    return name.split('.').pop()
+}
+function removeFileEvent(){
+    var removeBtn = Array.from(document.getElementsByClassName('remove-file'));
+    console.log(removeBtn);
+    removeBtn.forEach(btn => {
+        btn.addEventListener('click',function(event){
+            event.preventDefault();
+            btn.closest('li').remove();
+            if(!fileList.hasChildNodes()){
+                fileList.style.display = 'none';
+            }
+        })
+    });
+}

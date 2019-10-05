@@ -72,31 +72,32 @@
 .file-upload {
     background: $pale-grey;
     border: 2px dashed $light-blue-grey;
+    
     border-radius: 3px;
-    position: relative;
-    input[type="file"] {
-        opacity: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+     input[type="file"] {
+        display: none;
     }
 
     .icon-upload {
         margin: 30px auto 0;
     }
-
-    p{
-        line-height: 25px;
-        padding: 30px 45px 20px;
-        
-        span {
-            color: $bright-cyan;
-            text-decoration: underline;
+    label{
+        display: inline-block;
+        width: 100%;
+        span{
+            display: inline-block;
+            padding: 20px 30px 0;
+            text-align: center;
+            line-height: 25px;
+            font-size: 18px;
+            color: $dark-text;
+            i{
+                text-decoration: underline;
+                color: $bright-cyan;
+                font-style: normal;
+            }
         }
     }
-
     .note {
         margin: 40px 0 10px;
         width: 100%;
@@ -147,7 +148,7 @@
     border: solid rgba(0, 0, 0, .12);
     border-width: 2px 0;
     padding: 20px;
-
+    display: none;
     li {
         padding-bottom: 20px;
 
@@ -172,11 +173,6 @@
         text-overflow: ellipsis;
     }
 
-    .icon-pdf,
-    .icon-image {
-        margin-right: 5px;
-    }
-
     .file-name {
         width: 80px;
         margin-right: 80px;
@@ -188,13 +184,16 @@
     }
 
     .file-size {
-        width: 30px;
-        margin-right: 55px;
+        width: 40px;
+        margin-right: 45px;
         text-transform: capitalize;
     }
 
     .file-status {
         width: 80px;
         margin-right: 100px;
+    }
+    .remove-file{
+        float: right;
     }
 }

@@ -35,12 +35,13 @@
     display: block;
 }
 
-.icon-trash,.icon-pdf,.icon-image{
+.icon-trash,.icon-pdf,.icon-jpg,.icon-png,.icon-docx{
     height: 24px;
     width: 24px;
     vertical-align: middle;
     fill: $gun-metal;
 }
-.icon-pdf,.icon-image{
+.icon-pdf,.icon-png,.icon-jpg,.icon-docx{
     fill: #da3737;
+    margin-right: 10px;
 }
